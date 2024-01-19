@@ -18,7 +18,7 @@ public class MaxWeightAttribute : ValidationAttribute
         {
             if (int.TryParse(value.ToString(), out int weight))
             {
-                return weight < _maxWeight;
+                return weight <= _maxWeight;
             }
             else
             {

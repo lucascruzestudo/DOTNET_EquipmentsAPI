@@ -19,9 +19,9 @@ public class Equipment
 
     [Required(ErrorMessage = "Weight is required to create an equipment!")]
     [MaxWeight(100, ErrorMessage = "Weight must be less than 100 and a valid number!")]
-    public string Weight { get; set; }
+    public int Weight { get; set; }
 
-    public Equipment(string manufacturer, string name, string brand, string weight)
+    public Equipment(string manufacturer, string name, string brand, int weight)
     {
         Manufacturer = manufacturer;
         Name = name;
