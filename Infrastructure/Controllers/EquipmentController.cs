@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using EquipamentosApi.Models;
+using EquipamentosApi.Domain.Models;
 
 namespace EquipamentosApi.Infrastructure.Controllers;
 
@@ -15,7 +15,7 @@ public class EquipmentController : ControllerBase
     }
 
     [HttpGet]
-    public List<Equipment> GetEquipments(){
+    public IEnumerable<Equipment> GetEquipments(){
         return equipments;
     }
 }
