@@ -13,4 +13,9 @@ public class EquipmentController : ControllerBase
     public void CreateEquipment([FromBody] Equipment equipment){
         equipments.Add(equipment);
     }
+
+    [HttpGet]
+    public List<Equipment> GetEquipments(){
+        return equipments;
+    }
 }
